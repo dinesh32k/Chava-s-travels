@@ -98,4 +98,43 @@ body {
   font-size: 1.2rem;
   color: #333;
 }
+.tariff-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.tariff-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.tariff-table {
+  overflow-x: auto;
+}
+
+.tariff-table table {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.tariff-table th,
+.tariff-table td {
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+.tariff-table th {
+  background-color: #ff6600;
+  color: white;
+}
+
+.tariff-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
 
