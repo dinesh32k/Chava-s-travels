@@ -103,36 +103,51 @@ body {
 
 /* Tariff Section */
 .tariff-section {
-  padding: 60px 20px;
+  background-color: #f4f4f4; /* Light background for contrast */
+  padding: 40px 0;
   text-align: center;
-  background-color: #fff;
 }
 
-.tariff-section h2 {
+.tariff-header h2 {
   font-size: 2.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   color: #333;
 }
 
+.tariff-header p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Tariff Cards */
 .tariff-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .tariff-card {
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 10px;
-  background-color: #fafafa;
+  background-color: #fff;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 250px;
   transition: transform 0.3s ease;
 }
 
 .tariff-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05); /* Add hover effect */
+}
+
+.tariff-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  max-width: 220px; /* Image width adjusted */
 }
 
 .tariff-card h3 {
