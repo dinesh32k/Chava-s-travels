@@ -57,6 +57,8 @@ body {
 .hero-button:hover {
   background: #cc5200;
 }
+
+/* Services Section */
 .services-section {
   padding: 60px 20px;
   text-align: center;
@@ -98,10 +100,12 @@ body {
   font-size: 1.2rem;
   color: #333;
 }
+
+/* Tariff Section */
 .tariff-section {
   padding: 60px 20px;
-  background-color: #ffffff;
   text-align: center;
+  background-color: #fff;
 }
 
 .tariff-section h2 {
@@ -110,31 +114,34 @@ body {
   color: #333;
 }
 
-.tariff-table {
-  overflow-x: auto;
-}
-
-.tariff-table table {
-  width: 90%;
-  max-width: 800px;
+.tariff-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
   margin: 0 auto;
-  border-collapse: collapse;
-  font-size: 1rem;
 }
 
-.tariff-table th,
-.tariff-table td {
+.tariff-card {
   border: 1px solid #ddd;
-  padding: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fafafa;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
-.tariff-table th {
-  background-color: #ff6600;
-  color: white;
+.tariff-card:hover {
+  transform: translateY(-5px);
 }
 
-.tariff-table tr:nth-child(even) {
-  background-color: #f2f2f2;
+.tariff-card h3 {
+  margin-bottom: 10px;
+  color: #ff6600;
+  font-size: 1.4rem;
 }
 
-
+.tariff-card p {
+  margin: 5px 0;
+  color: #333;
+}
