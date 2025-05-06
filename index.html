@@ -2,22 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chava's Cars and Travels</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-overlay">
       <div class="hero-text">
         <h1>Chava's Cars and Travels</h1>
         <p>Your trusted travel partner</p>
-        <!-- Updated "Book Now" button with WhatsApp link -->
-        <a href="https://wa.me/9849266978?text=I%20would%20like%20to%20book%20a%20ride." target="_blank" class="hero-button">
-          Book Now
-        </a>
+        <a href="https://wa.me/919849266978?text=I%20would%20like%20to%20book%20a%20ride." class="hero-button" target="_blank">Book Now</a>
       </div>
     </div>
   </section>
@@ -72,50 +68,44 @@
     </div>
   </section>
 
-</body>
-</html>
-<!-- Contact Us Section -->
-<section class="contact-us-section" id="contact">
-  <h2>Contact Us</h2>
-  
-  <div class="contact-container">
-    <!-- Contact Form -->
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <h2>Contact Us</h2>
     <div class="contact-form">
-      <h3>Send Us Your Requirements</h3>
-      <form action="https://formsubmit.co/venkat99922vc@gmail.com" method="POST">
+      <form>
         <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required placeholder="Enter your name" />
-        
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required placeholder="Enter your email" />
-        
-        <!-- Car Selection with Dropdown -->
-        <label for="car-selection">Select Your Car</label>
-        <select id="car-selection" name="car-selection" required>
-          <option value="" disabled selected>Select a car</option>
-          <option value="Innova">Innova</option>
-          <option value="Swift Dzire">Swift Dzire</option>
-          <option value="Innova Crysta">Innova Crysta</option>
-          <option value="Tempo Traveller">Tempo Traveller</option>
-          <option value="Bus">Bus</option>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+        <label for="phone">Your Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+
+        <label for="requirement">Send us your requirements</label>
+        <select id="requirement" name="requirement">
+          <option value="innova">Innova</option>
+          <option value="swift-dzire">Swift Dzire</option>
+          <option value="innova-crysta">Innova Crysta</option>
+          <option value="tempo-traveller">Tempo Traveller</option>
+          <option value="bus">Bus</option>
         </select>
-        
-        <button type="submit" class="submit-btn">Submit</button>
+
+        <button type="submit">Submit</button>
       </form>
     </div>
-
-    <!-- Contact Information or Map Section -->
     <div class="contact-info">
-      <h3>Our Location</h3>
-      <p><strong>Chava's Cars and Travels</strong><br>
-      21-10/3-78, 3rd Ln, Srinagar, Satyaranayana Puram, Vijayawada, Andhra Pradesh 520011</p>
-      
-      <!-- Google Maps Embed -->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3824.9914576307615!2d80.641772!3d16.5265289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35e55aeded93e3%3A0xeddc6ebe39fb36d5!2s21-10%2F3-78%2C%203rd%20Ln%2C%20Srinagar%2C%20Satyaranayana%20Puram%2C%20Vijayawada%2C%20Andhra%20Pradesh%20520011!5e0!3m2!1ste!2sin!4v1746507674943!5m2!1ste!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-      <p><strong>Contact Us:</strong></p>
-      <p>Email: venkat99922vc@gmail.com</p>
-      <p>Phone: +91 9849266978</p>
+      <p>Email: <a href="mailto:venkat99922vc@gmail.com">venkat99922vc@gmail.com</a></p>
+      <p>Phone: <a href="tel:+919849266978">+91 9849266978</a></p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3824.9914576307615!2d80.641772!3d16.5265289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35e55aeded93e3%3A0xeddc6ebe39fb36d5!2s21-10%2F3-78%2C%203rd%20Ln%2C%20Srinagar%2C%20Satyaranayana%20Puram%2C%20Vijayawada%2C%20Andhra%20Pradesh%20520011!5e0!3m2!1ste!2sin!4v1746507674943!5m2!1ste!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919849266978" class="whatsapp-button" target="_blank" title="Chat on WhatsApp">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" />
+  </a>
+
+  <!-- Call Us Button -->
+  <a href="tel:+919849266978" class="call-us-button" title="Call Us">
+    📞 Call Us
+  </a>
+</body>
+</html>
