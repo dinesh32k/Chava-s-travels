@@ -1,118 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chava's Cars and Travels</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="logo.jpg" alt="Chava's Cars and Travels">
-    </div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#tariff">Tariff</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
   <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Welcome to Chava's Cars and Travels</h1>
-      <p>Your trusted travel partner for smooth journeys!</p>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>Chava's Cars and Travels provides reliable and comfortable transportation services for all your travel needs. Whether you are heading to the airport, planning a family vacation, or need a vehicle for business, we've got you covered!</p>
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h1>Chava's Cars and Travels</h1>
+        <p>Your trusted travel partner</p>
+        <a href="#contact" class="hero-button">Book Now</a>
+      </div>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section class="services" id="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="service-cards">
-        <div class="service-card">
-          <i class="fas fa-car"></i>
-          <h3>Car Rentals</h3>
-          <p>Choose from a wide variety of vehicles to suit your needs.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-bus"></i>
-          <h3>Bus Rentals</h3>
-          <p>Comfortable buses for group travels or business trips.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-plane"></i>
-          <h3>Airport Transfers</h3>
-          <p>Efficient and timely airport pickups and drop-offs.</p>
-        </div>
+  <section class="services-section" id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/100/car--v1.png" alt="Car Rental">
+        <h3>Car Rentals</h3>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/100/driver.png" alt="Driver Services">
+        <h3>Driver Services</h3>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/100/place-marker--v1.png" alt="Outstation">
+        <h3>Outstation Trips</h3>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/100/gps-device.png" alt="GPS Tracking">
+        <h3>GPS Tracking</h3>
       </div>
     </div>
   </section>
 
   <!-- Tariff Section -->
-  <section class="tariff" id="tariff">
-    <div class="container">
-      <h2>Our Tariffs</h2>
-      <div class="tariff-table">
-        <div class="tariff-item">
-          <img src="innova.jpg" alt="Innova">
-          <h3>Innova</h3>
-          <p>₹2000 per day</p>
-        </div>
-        <div class="tariff-item">
-          <img src="swift.jpg" alt="Swift">
-          <h3>Swift</h3>
-          <p>₹1500 per day</p>
-        </div>
-        <div class="tariff-item">
-          <img src="verna.jpg" alt="Verna">
-          <h3>Verna</h3>
-          <p>₹1800 per day</p>
-        </div>
+  <section class="tariff-section" id="tariff">
+    <h2>Tariff</h2>
+    <div class="tariff-cards">
+      <div class="tariff-card">
+        <h3>Innova Crysta</h3>
+        <p>Seating Capacity: 7+1</p>
+        <p>Fare: ₹20/km</p>
+      </div>
+      <div class="tariff-card">
+        <h3>Swift Dzire</h3>
+        <p>Seating Capacity: 4+1</p>
+        <p>Fare: ₹12/km</p>
+      </div>
+      <div class="tariff-card">
+        <h3>Etios</h3>
+        <p>Seating Capacity: 4+1</p>
+        <p>Fare: ₹14/km</p>
+      </div>
+      <div class="tariff-card">
+        <h3>Tempo Traveller</h3>
+        <p>Seating Capacity: 12+1</p>
+        <p>Fare: ₹25/km</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form action="#" method="POST">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Chava's Cars and Travels. All rights reserved.</p>
-  </footer>
-  
 </body>
 </html>
