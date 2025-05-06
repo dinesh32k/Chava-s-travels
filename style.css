@@ -1,195 +1,146 @@
-* {
+/* General Styling */
+body {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 
-body {
-  background-color: #fff;
-  color: #333;
-}
-
-/* Hero Section */
-.hero-section {
-  position: relative;
-  background: url('hero.jpg') no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-overlay {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-text {
+/* Navbar */
+.navbar {
+  background-color: #333;
   color: white;
-  text-align: center;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-text p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.hero-button {
-  background: #ff6600;
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.hero-button:hover {
-  background: #cc5200;
-}
-
-/* Services Section */
-.services-section {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #f5f5f5;
-}
-
-.services-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #333;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.service-card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-}
-
-.service-card img {
-  width: 60px;
-  margin-bottom: 15px;
-}
-
-.service-card h3 {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-/* Tariff Section */
-.tariff-section {
-  background-color: #f4f4f4; /* Light background for contrast */
-  padding: 40px 0;
-  text-align: center;
-}
-
-.tariff-header h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.tariff-header p {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 30px;
-}
-
-/* Tariff Cards */
-.tariff-cards {
+  padding: 15px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 150px;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
   gap: 20px;
 }
 
-.tariff-card {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  width: 250px;
-  transition: transform 0.3s ease;
+.navbar .nav-links li {
+  display: inline;
 }
 
-.tariff-card:hover {
-  transform: scale(1.05); /* Add hover effect */
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px;
 }
 
-.tariff-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  max-width: 220px; /* Image width adjusted */
+.navbar .nav-links a:hover {
+  border-bottom: 2px solid #ff6600;
 }
 
-.tariff-card h3 {
-  margin-bottom: 10px;
-  color: #ff6600;
-  font-size: 1.4rem;
+/* Hero Section */
+.hero {
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
 }
 
-.tariff-card p {
-  margin: 5px 0;
-  color: #333;
+.hero h1 {
+  font-size: 3.5rem;
 }
+
+.hero p {
+  font-size: 1.5rem;
+}
+
 /* Contact Section */
 .contact {
-  background-color: #f4f4f4;
+  background-color: #f7f7f7;
   padding: 60px 20px;
-  text-align: center;
 }
 
-.contact-header h2 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
 }
 
-.contact-header p {
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 40px;
-}
-
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
+/* Contact Information */
+.contact-info {
+  flex: 1;
   background-color: white;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.contact-info p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.contact-info a {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+.contact-info .social-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.contact-info .social-icon {
+  font-size: 1.5rem;
+  color: #ff6600;
+  transition: color 0.3s;
+}
+
+.contact-info .social-icon:hover {
+  color: #e65c00;
+}
+
+/* Contact Form */
+.contact-form-container {
+  flex: 1;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.contact-form h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .contact-form .form-group {
   margin-bottom: 20px;
-  text-align: left;
 }
 
 .contact-form label {
@@ -201,10 +152,11 @@ body {
 
 .contact-form input, .contact-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 .contact-form textarea {
@@ -214,14 +166,31 @@ body {
 .contact-form .submit-btn {
   background-color: #ff6600;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 25px;
   font-size: 1.1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .contact-form .submit-btn:hover {
   background-color: #e65c00;
 }
 
+/* Google Map Container */
+.map-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
