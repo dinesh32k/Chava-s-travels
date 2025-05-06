@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Sports Score</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .scorecard, .commentary {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .scorecard h2, .commentary h2 {
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Scorecard Section -->
+        <div class="scorecard">
+            <h2>Team A Scorecard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Runs</th>
+                        <th>Balls</th>
+                        <th>Strike Rate</th>
+                    </tr>
+                </thead>
+                <tbody id="scorecard-data">
+                    <!-- Data to be populated dynamically via JavaScript -->
+                </tbody>
+            </table>
+            <p>Total Score: <span id="total-score">0/0</span></p>
+        </div>
+
+        <!-- Live Commentary Section -->
+        <div class="commentary">
+            <h2>Live Commentary</h2>
+            <div id="commentary-feed">
+                <!-- Commentary to be dynamically updated -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to dynamically fetch and update scorecard and commentary data
+        function updateScorecard() {
+            // Simulated data fetching
+            const scorecardData = [
+                { player: 'Player 1', runs: 45, balls: 30, sr: 150 },
+                { player: 'Player 2', runs: 28, balls: 22, sr: 127.27 },
+            ];
+            const totalScore = "73/2";
+
+            // Populate scorecard data
+            let scorecardTable = '';
+            scorecardData.forEach(player => {
+                scorecardTable += `<tr>
+                    <td>${player.player}</td>
+                    <td>${player.runs}</td>
+                    <td>${player.balls}</td>
+                    <td>${player.sr}</td>
+                </tr>`;
+            });
+            document.getElementById('scorecard-data').innerHTML = scorecardTable;
+            document.getElementById('total-score').innerText = totalScore;
+        }
+
+        function updateCommentary() {
+            // Simulated live commentary
+            const commentary = [
+                'Over 1.1: Player 1 hits a four!',
+                'Over 1.2: Player 1 takes a single.',
+            ];
+
+            let commentaryFeed = '';
+            commentary.forEach(comment => {
+                commentaryFeed += `<p>${comment}</p>`;
+            });
+            document.getElementById('commentary-feed').innerHTML = commentaryFeed;
+        }
+
+        // Call functions to update scorecard and commentary
+        updateScorecard();
+        updateCommentary();
+    </script>
+</body>
+</html>
