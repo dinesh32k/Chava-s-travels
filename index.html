@@ -1,100 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chava's Cars and Travels</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
 
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.jpg" alt="Chava's Cars and Travels">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-overlay">
-      <div class="hero-text">
-        <h1>Chava's Cars and Travels</h1>
-        <p>Your trusted travel partner</p>
-        <a href="#contact" class="hero-button">Book Now</a>
-      </div>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Welcome to Chava's Cars and Travels</h1>
+      <p>Your trusted travel partner for smooth journeys!</p>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="services-section" id="services">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <img src="https://img.icons8.com/ios-filled/100/car--v1.png" alt="Car Rental">
-        <h3>Car Rentals</h3>
-      </div>
-      <div class="service-card">
-        <img src="https://img.icons8.com/ios-filled/100/driver.png" alt="Driver Services">
-        <h3>Driver Services</h3>
-      </div>
-      <div class="service-card">
-        <img src="https://img.icons8.com/ios-filled/100/place-marker--v1.png" alt="Outstation">
-        <h3>Outstation Trips</h3>
-      </div>
-      <div class="service-card">
-        <img src="https://img.icons8.com/ios-filled/100/gps-device.png" alt="GPS Tracking">
-        <h3>GPS Tracking</h3>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tariff Section -->
-<section class="tariff-section" id="tariff">
-  <div class="tariff-header">
-    <h2>Our Tariff</h2>
-    <p>Affordable rates for comfortable travel</p>
-  </div>
-  <div class="tariff-cards">
-    <div class="tariff-card">
-      <img src="images/innova.jpg" alt="Innova" class="tariff-img"> <!-- Add Image -->
-      <h3>Innova</h3>
-      <p>Seating Capacity: 7+1</p>
-      <p>Fare: ₹20/km</p>
-    </div>
-    <div class="tariff-card">
-      <img src="images/swift_dzire.jpg" alt="Swift Dzire" class="tariff-img"> <!-- Add Image -->
-      <h3>Swift Dzire</h3>
-      <p>Seating Capacity: 4+1</p>
-      <p>Fare: ₹12/km</p>
-    </div>
-    <div class="tariff-card">
-      <img src="images/etios.jpg" alt="Etios" class="tariff-img"> <!-- Add Image -->
-      <h3>Etios</h3>
-      <p>Seating Capacity: 4+1</p>
-      <p>Fare: ₹14/km</p>
-    </div>
-    <div class="tariff-card">
-      <img src="images/tempo_traveller.jpg" alt="Tempo Traveller" class="tariff-img"> <!-- Add Image -->
-      <h3>Tempo Traveller</h3>
-      <p>Seating Capacity: 12+1</p>
-      <p>Fare: ₹25/km</p>
-    </div>
-  </div>
-</section>
   <!-- Contact Section -->
-<section class="contact" id="contact">
-  <div class="contact-header">
-    <h2>Contact Us</h2>
-    <p>Get in touch for bookings, inquiries, or any other questions</p>
-  </div>
-  <form class="contact-form" action="mailto:dinesh5123k@gmail.com" method="post" enctype="text/plain">
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
-    </div>
-    <button type="submit" class="submit-btn">Send Message</button>
-  </form>
-</section>
+  <section class="contact" id="contact">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to book a ride, feel free to reach out to us!</p>
+        <ul>
+          <li><strong>Address:</strong> 1234 Travel Street, City, Country</li>
+          <li><strong>Phone:</strong> <a href="tel:+1234567890">+1 234-567-890</a></li>
+          <li><strong>Email:</strong> <a href="mailto:info@chavastravels.com">info@chavastravels.com</a></li>
+        </ul>
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
 
+      <div class="contact-form-container">
+        <form class="contact-form" action="mailto:youremail@example.com" method="post" enctype="text/plain">
+          <h3>Send Us a Message</h3>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Optional: Google Map -->
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=...your map embed link..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Chava's Cars and Travels. All rights reserved.</p>
+  </footer>
+  
+</body>
+</html>
