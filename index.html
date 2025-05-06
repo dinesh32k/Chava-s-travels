@@ -3,107 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Sports Score</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .scorecard, .commentary {
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .scorecard h2, .commentary h2 {
-            margin-bottom: 10px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-    </style>
+    <title>Chava's Cars and Travels</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.jpg">
 </head>
 <body>
-    <div class="container">
-        <!-- Scorecard Section -->
-        <div class="scorecard">
-            <h2>Team A Scorecard</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Player</th>
-                        <th>Runs</th>
-                        <th>Balls</th>
-                        <th>Strike Rate</th>
-                    </tr>
-                </thead>
-                <tbody id="scorecard-data">
-                    <!-- Data to be populated dynamically via JavaScript -->
-                </tbody>
-            </table>
-            <p>Total Score: <span id="total-score">0/0</span></p>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Chava's Logo">
         </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#tariff">Tariff</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Live Commentary Section -->
-        <div class="commentary">
-            <h2>Live Commentary</h2>
-            <div id="commentary-feed">
-                <!-- Commentary to be dynamically updated -->
-            </div>
+    <section class="hero" id="home">
+        <h1>Welcome to Chava's Cars and Travels</h1>
+        <a href="#contact" class="cta-button">Book Now</a>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Local and Outstation Trips</li>
+            <li>Airport Pickup and Drop</li>
+            <li>Daily Rentals</li>
+            <li>Corporate Bookings</li>
+        </ul>
+    </section>
+
+    <section id="tariff">
+        <h2>Tariff</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Vehicle</th>
+                    <th>Rate per km</th>
+                    <th>Minimum kms/day</th>
+                    <th>Driver Charges</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sedan</td>
+                    <td>₹12</td>
+                    <td>300</td>
+                    <td>₹400</td>
+                </tr>
+                <tr>
+                    <td>SUV</td>
+                    <td>₹15</td>
+                    <td>300</td>
+                    <td>₹500</td>
+                </tr>
+                <tr>
+                    <td>Tempo Traveller</td>
+                    <td>₹20</td>
+                    <td>300</td>
+                    <td>₹700</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="car1.jpg" alt="Car 1">
+            <img src="car2.jpg" alt="Car 2">
+            <img src="car3.jpg" alt="Car 3">
         </div>
-    </div>
+    </section>
 
-    <script>
-        // JavaScript to dynamically fetch and update scorecard and commentary data
-        function updateScorecard() {
-            // Simulated data fetching
-            const scorecardData = [
-                { player: 'Player 1', runs: 45, balls: 30, sr: 150 },
-                { player: 'Player 2', runs: 28, balls: 22, sr: 127.27 },
-            ];
-            const totalScore = "73/2";
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: <a href="tel:+919999999999">+91 99999 99999</a></p>
+        <p>Email: <a href="mailto:chavascars@example.com">chavascars@example.com</a></p>
+        <a href="https://wa.me/919999999999" class="whatsapp">Message us on WhatsApp</a>
+    </section>
 
-            // Populate scorecard data
-            let scorecardTable = '';
-            scorecardData.forEach(player => {
-                scorecardTable += `<tr>
-                    <td>${player.player}</td>
-                    <td>${player.runs}</td>
-                    <td>${player.balls}</td>
-                    <td>${player.sr}</td>
-                </tr>`;
-            });
-            document.getElementById('scorecard-data').innerHTML = scorecardTable;
-            document.getElementById('total-score').innerText = totalScore;
-        }
-
-        function updateCommentary() {
-            // Simulated live commentary
-            const commentary = [
-                'Over 1.1: Player 1 hits a four!',
-                'Over 1.2: Player 1 takes a single.',
-            ];
-
-            let commentaryFeed = '';
-            commentary.forEach(comment => {
-                commentaryFeed += `<p>${comment}</p>`;
-            });
-            document.getElementById('commentary-feed').innerHTML = commentaryFeed;
-        }
-
-        // Call functions to update scorecard and commentary
-        updateScorecard();
-        updateCommentary();
-    </script>
+    <footer>
+        <p>&copy; 2025 Chava's Cars and Travels. All rights reserved.</p>
+    </footer>
 </body>
 </html>
