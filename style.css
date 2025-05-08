@@ -228,3 +228,78 @@ body {
     width: 90%;
   }
 }
+.car-rental-hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero.jpg') center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.car-rental-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.car-rental-paragraph {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  color: #333;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-rental-paragraph:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* Quote form */
+.quote-form-section {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.quote-form-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #ff6600;
+  text-align: center;
+}
+
+#quote-form input,
+#quote-form textarea,
+#quote-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+#quote-form button {
+  width: 100%;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#quote-form button:hover {
+  background-color: #e65c00;
+}
+
