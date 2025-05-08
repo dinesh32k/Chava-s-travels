@@ -8,17 +8,15 @@
 </head>
 <body>
 
-  <!-- Hero or Header Section -->
-  <section class="car-rental-hero">
-    <div class="car-rental-overlay">
+  <section class="car-rentals-section">
+    <div class="rental-description">
       <h1>Car Rentals</h1>
-      <div class="car-rental-paragraph">
-        <p>
-          At Chava's Cars and Travels, we offer reliable and affordable car rental services tailored to your travel needs. Whether it's a business trip, family vacation, or a spontaneous weekend getaway, our fleet is equipped to deliver comfort and safety.
-          <br><br>
-          Why choose us? Our experienced drivers, clean and well-maintained vehicles, and round-the-clock service make us a trusted name across the region. We strive to make your travel stress-free, smooth, and memorable.
-        </p>
-      </div>
+      <p>
+        At Chava's Cars and Travels, we provide reliable and affordable car rental services across Andhra Pradesh and beyond. 
+        Our fleet includes well-maintained vehicles like Innova, Swift Dzire, Scorpio, and Tempo Traveller to suit every travel need. 
+        Whether it's a business trip, a family outing, or a weekend getaway, we ensure a smooth, comfortable, and timely experience. 
+        Choose us for our commitment to safety, transparent pricing, and professional drivers. Let us take the wheel while you sit back and enjoy the journey!
+      </p>
     </div>
   </section>
 
@@ -29,7 +27,6 @@
       <input type="text" id="name" name="name" placeholder="Your Name" required>
       <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
       <input type="email" id="email" name="email" placeholder="Your Email" required>
-      <textarea id="requirement" name="requirement" placeholder="Your Requirement" rows="4" required></textarea>
       <select id="vehicle" name="vehicle" required>
         <option value="">Select a Vehicle</option>
         <option value="Innova">Innova</option>
@@ -47,10 +44,9 @@
       const name = document.getElementById("name").value;
       const phone = document.getElementById("phone").value;
       const email = document.getElementById("email").value;
-      const requirement = document.getElementById("requirement").value;
       const vehicle = document.getElementById("vehicle").value;
 
-      const message = `Quote Request:%0AName: ${name}%0APhone: ${phone}%0AEmail: ${email}%0ARequirement: ${requirement}%0AVehicle: ${vehicle}`;
+      const message = `Quote Request:%0AName: ${name}%0APhone: ${phone}%0AEmail: ${email}%0AVehicle: ${vehicle}`;
       const whatsappUrl = `https://wa.me/919849266978?text=${message}`;
       window.open(whatsappUrl, '_blank');
 
