@@ -59,8 +59,9 @@ body {
 
 .services-grid {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .service-card {
@@ -71,11 +72,17 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card img {
   width: 50px;
   height: 50px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Tariff */
@@ -96,6 +103,12 @@ body {
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tariff-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Contact */
@@ -127,6 +140,7 @@ body {
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #25D366;
+  transition: opacity 0.3s ease;
 }
 
 .whatsapp-button {
@@ -143,7 +157,190 @@ body {
 }
 
 .whatsapp-button:hover, .call-button:hover {
-  opacity: 0.8;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tariff-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card, .tariff-card {
+    width: 80%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero-text h1, .hero-text p {
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-button {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.hero-button:hover {
+  background-color: #ff3300;
+}
+
+/* Services */
+.services-section {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-card {
+  background-color: white;
+  padding: 20px;
+  width: 22%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card img {
+  width: 50px;
+  height: 50px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Tariff */
+.tariff-section {
+  background-color: #f1f1f1;
+  padding: 60px 20px;
+}
+
+.tariff-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.tariff-card {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tariff-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact */
+.contact-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+#map-container {
+  margin-top: 20px;
+}
+
+/* Floating Buttons */
+.whatsapp-button, .call-button {
+  position: fixed;
+  bottom: 20px;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #25D366;
+  transition: opacity 0.3s ease;
+}
+
+.whatsapp-button {
+  right: 20px;
+}
+
+.call-button {
+  right: 90px;
+}
+
+.whatsapp-button img, .call-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.whatsapp-button:hover, .call-button:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 /* Responsive */
