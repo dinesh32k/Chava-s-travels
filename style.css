@@ -184,3 +184,33 @@ body {
     font-size: 2rem;
   }
 }
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: left;
+}
+
+.contact-info, .contact-map {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+/* Fix for 4 tariffs not aligning properly */
+.tariff-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tariff-card {
+  flex: 1 1 250px;
+  max-width: 250px;
+}
+
