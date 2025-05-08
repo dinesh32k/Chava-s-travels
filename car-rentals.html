@@ -5,55 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Car Rentals - Chava's Cars and Travels</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- EmailJS Script for email integration -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init('user_YourEmailJSUserID'); // Replace with your EmailJS user ID
+  </script>
 </head>
 <body>
 
-  <section class="car-rentals-section">
-    <div class="rental-description">
+  <section class="car-rental-section">
+    <div class="rental-intro">
       <h1>Car Rentals</h1>
-      <p>
-        At Chava's Cars and Travels, we provide reliable and affordable car rental services across Andhra Pradesh and beyond. 
-        Our fleet includes well-maintained vehicles like Innova, Swift Dzire, Scorpio, and Tempo Traveller to suit every travel need. 
-        Whether it's a business trip, a family outing, or a weekend getaway, we ensure a smooth, comfortable, and timely experience. 
-        Choose us for our commitment to safety, transparent pricing, and professional drivers. Let us take the wheel while you sit back and enjoy the journey!
-      </p>
+      <div class="rental-box">
+        <p>
+          At Chava's Cars and Travels, we provide reliable and comfortable car rental services tailored to your travel needs.
+          Whether it's a family trip, business travel, or a weekend getaway, our well-maintained fleet ensures a safe and pleasant journey.
+          Choose us for punctuality, affordability, and friendly service.
+        </p>
+      </div>
+    </div>
+
+    <div class="rental-form-section">
+      <h2>Request a Quote</h2>
+      <form id="quoteForm" onsubmit="return sendQuote(event)">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="tel" id="phone" placeholder="Your Phone Number" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+
+        <select id="carType" required>
+          <option value="">Select Car Type</option>
+          <option>Innova</option>
+          <option>Swift Dzire</option>
+          <option>Scorpio</option>
+          <option>Tempo Traveller</option>
+          <option>Innova Crysta</option>
+        </select>
+
+        <button type="submit">Get Quote</button>
+      </form>
     </div>
   </section>
 
-  <!-- Quote Form Section -->
-  <section class="quote-form-section">
-    <h2>Get a Quote</h2>
-    <form id="quote-form" onsubmit="return sendQuote()">
-      <input type="text" id="name" name="name" placeholder="Your Name" required>
-      <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
-      <select id="vehicle" name="vehicle" required>
-        <option value="">Select a Vehicle</option>
-        <option value="Innova">Innova</option>
-        <option value="Swift Dzire">Swift Dzire</option>
-        <option value="Scorpio">Scorpio</option>
-        <option value="Tempo Traveller">Tempo Traveller</option>
-        <option value="Innova Crysta">Innova Crysta</option>
-      </select>
-      <button type="submit">Get Quote</button>
-    </form>
-  </section>
-
   <script>
-    function sendQuote() {
+    function sendQuote(event) {
+      event.preventDefault(); // Prevent form from submitting normally
+
+      // Get form values
       const name = document.getElementById("name").value;
       const phone = document.getElementById("phone").value;
       const email = document.getElementById("email").value;
-      const vehicle = document.getElementById("vehicle").value;
+      const carType = document.getElementById("carType").value;
 
-      const message = `Quote Request:%0AName: ${name}%0APhone: ${phone}%0AEmail: ${email}%0AVehicle: ${vehicle}`;
-      const whatsappUrl = `https://wa.me/919849266978?text=${message}`;
-      window.open(whatsappUrl, '_blank');
+      // Prepare the message for WhatsApp and Email
+      const message = `Hello, I am ${name}. I would like to request a quote for a ${carType}. You can contact me at ${phone} or ${email}.`;
 
-      const mailtoLink = `mailto:venkat99922vc@gmail.com?subject=Quote Request from ${name}&body=${message}`;
-      window.open(mailtoLink, '_blank');
+      // Send message to WhatsApp
+      const whatsappURL = `https://wa.me/919849266978?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, "_blank");
 
-      return false;
+      // Send email using EmailJS
+      emailjs.send('service_YourServiceID', 'template_YourTemplateID', {
+        from_name: name,
+        from_phone: phone,
+        from_email: email,
+        car_type: carType
+      }).then((response) => {
+        console.log('Email sent successfully!', response);
+        alert('Your quote request has been sent! We will contact you soon.');
+      }).catch((error) => {
+        console.error('Email sending failed:', error);
+        alert('There was an error while sending your request. Please try again.');
+      });
+
+      return false; // Keep the page from reloading
     }
   </script>
 
