@@ -8,46 +8,58 @@
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-overlay">
-      <div class="hero-text">
-        <h1>Car Rentals</h1>
-        <p>Reliable cars for all your travel needs</p>
+  <!-- Hero or Header Section -->
+  <section class="car-rental-hero">
+    <div class="car-rental-overlay">
+      <h1>Car Rentals</h1>
+      <div class="car-rental-paragraph">
+        <p>
+          At Chava's Cars and Travels, we offer reliable and affordable car rental services tailored to your travel needs. Whether it's a business trip, family vacation, or a spontaneous weekend getaway, our fleet is equipped to deliver comfort and safety.
+          <br><br>
+          Why choose us? Our experienced drivers, clean and well-maintained vehicles, and round-the-clock service make us a trusted name across the region. We strive to make your travel stress-free, smooth, and memorable.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Car Rentals Details Section -->
-  <section class="car-rentals-details">
-    <h2>Why Choose Chava's Cars and Travels for Car Rentals?</h2>
-    <div class="rental-description">
-      <p>
-        At Chava's Cars and Travels, we provide a fleet of well-maintained cars for all your travel needs.
-        Whether you're going on a business trip, family vacation, or a weekend getaway, we have a car to suit your needs.
-        Our rentals are affordable, reliable, and come with the assurance of quality service.
-        Choose us for a comfortable and hassle-free ride experience.
-      </p>
-    </div>
+  <!-- Quote Form Section -->
+  <section class="quote-form-section">
+    <h2>Get a Quote</h2>
+    <form id="quote-form" onsubmit="return sendQuote()">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="requirement" name="requirement" placeholder="Your Requirement" rows="4" required></textarea>
+      <select id="vehicle" name="vehicle" required>
+        <option value="">Select a Vehicle</option>
+        <option value="Innova">Innova</option>
+        <option value="Swift Dzire">Swift Dzire</option>
+        <option value="Scorpio">Scorpio</option>
+        <option value="Tempo Traveller">Tempo Traveller</option>
+        <option value="Innova Crysta">Innova Crysta</option>
+      </select>
+      <button type="submit">Get Quote</button>
+    </form>
   </section>
 
-  <!-- Additional Information Section (Below the Paragraph) -->
-  <section class="additional-info">
-    <h3>Our Fleet</h3>
-    <p>
-      We offer a wide range of cars including compact sedans, SUVs, and luxury vehicles. Each of our vehicles is carefully maintained to ensure your comfort and safety.
-      You can choose from various models, depending on your needs. All of our cars come with comprehensive insurance for your peace of mind.
-    </p>
-  </section>
+  <script>
+    function sendQuote() {
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const email = document.getElementById("email").value;
+      const requirement = document.getElementById("requirement").value;
+      const vehicle = document.getElementById("vehicle").value;
 
-  <!-- Floating Buttons -->
-  <a href="https://wa.me/9849266978?text=I%20would%20like%20to%20book%20a%20ride." target="_blank" class="whatsapp-button">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-  </a>
+      const message = `Quote Request:%0AName: ${name}%0APhone: ${phone}%0AEmail: ${email}%0ARequirement: ${requirement}%0AVehicle: ${vehicle}`;
+      const whatsappUrl = `https://wa.me/919849266978?text=${message}`;
+      window.open(whatsappUrl, '_blank');
 
-  <a href="tel:+919849266978" class="call-button">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Call" />
-  </a>
+      const mailtoLink = `mailto:venkat99922vc@gmail.com?subject=Quote Request from ${name}&body=${message}`;
+      window.open(mailtoLink, '_blank');
+
+      return false;
+    }
+  </script>
 
 </body>
 </html>
